@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     public float atkLength;
     [Header("攻擊中心點")]
     public Transform atkpoint;
+    [Header("攻擊力")]
+    public float atk = 30;
+    public float hp = 100;
 
 
     private Transform player;
@@ -68,13 +71,28 @@ public class Enemy : MonoBehaviour
 
                 if (Physics.Raycast(atkpoint.position, atkpoint.forward, out hit, atkLength, 1 << 8))
                 {
-                    hit.collider.GetComponent< Player>().Damage();
+                    hit.collider.GetComponent< Player>().Damage(atk);
                 }
             }
         }
     }
 
+    public void Damage(float damage)
+    {
 
+        hp -= damage;
+        ani.SetTrigger("受傷觸發");
+
+        if (hp <= 0) Dead();
+    }
+
+
+    private void Dead()
+    {
+        nav.isStopped = true;
+        enabled = false;
+        ani.SetBool("死亡開關", true);
+    }
     /// <summary>
     /// 追蹤
     /// </summary>

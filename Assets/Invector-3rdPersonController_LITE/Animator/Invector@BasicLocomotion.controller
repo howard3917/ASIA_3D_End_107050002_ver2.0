@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: "\u9023\u64CA01"
+    m_ConditionEvent: "\u9023\u64CA"
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 155056646512100193}
@@ -83,7 +83,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: "\u9023\u64CA01"
+    m_ConditionEvent: "\u9023\u64CA"
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6783391830628000049}
@@ -221,7 +221,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: "\u9023\u64CA01"
+  - m_Name: "\u9023\u64CA"
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
